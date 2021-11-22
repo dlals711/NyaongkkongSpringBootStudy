@@ -1,5 +1,6 @@
 package jpabook.jpashop.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -22,6 +23,7 @@ public class Member {
     @Embedded // 내장타입을 포함했다
     private Address address;
 
+    @JsonIgnore
     @OneToMany(mappedBy = "member") // 저는 연관관계 주인이 아니에여, 거울이에요,누구에 대해서 매핑이 됐나요?
     private List<Order> orders = new ArrayList<>();
 }
