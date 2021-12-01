@@ -15,7 +15,7 @@ spring:
       hibernate: #띄어쓰기 6칸
         # show_sql: true #띄어쓰기 8칸
         format_sql: true #띄어쓰기 8칸
-
+        default_batch_fetch_size: 500 #인쿼리개수
 logging:
   level:
     org.hibernate.SQL: debug
